@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from datetime import datetime
-from backend.db import Base
+from backend.database import Base
 
 
 class PostModel(Base):
@@ -9,4 +9,5 @@ class PostModel(Base):
     title = Column(String, index=True)
     rezume = Column(String)
     info = Column(String)
-    created_at = Column(DateTime, default=datetime.now())
+    created_at = Column(DateTime, default=datetime.utcnow())
+    slug = Column(String, unique=True, index=True)

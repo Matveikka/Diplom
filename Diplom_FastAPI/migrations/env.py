@@ -18,11 +18,9 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-from backend.db import Base
+from backend.database import Base
 from models.post import PostModel
-from schemas import Post
 target_metadata = Base.metadata
-
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

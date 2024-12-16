@@ -8,5 +8,4 @@ class Post(BaseModel):
     rezume: str
     info: str
     created_at: datetime = None
-
-
+    slug: str
