@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from datetime import datetime
-from backend.database import Base
+from Diplom_FastAPI.backend.database import Base
 
 
 class PostModel(Base):
