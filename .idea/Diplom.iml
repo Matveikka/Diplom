@@ -4,9 +4,9 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Diplom_Django" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Diplom_Django" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Diplom_FastAPI" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Diplom_FastAPI" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Diplom_FastAPI" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../Diplom1/Diplom_FastAPI" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../Diplom1/Diplom_FastAPI" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../Diplom1/Diplom_FastAPI" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/_Diplom_FastAPI" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
