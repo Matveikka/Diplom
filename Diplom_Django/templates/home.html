@@ -7,7 +7,7 @@
         <div class="post">
             <h2><a href="{% url 'details' slug=post.slug %}">{{ post.title }}</a></h2>
             <p>{{ post.rezume }}</p>
-            <p><small>Создано: {{ post.created_at }}</small></p>
+            <p><small>Создано: {{ post.created_at|date:"d.m.Y H:i" }}</small></p>
         </div>
     {% endfor %}
 {% endblock %}
