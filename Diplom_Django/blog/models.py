@@ -4,7 +4,6 @@ from django.utils.text import slugify
 
 # Create your models here.
 class Post(models.Model):
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE, )
     title = models.CharField(max_length=50)
     info = models.TextField()
     rezume = models.TextField(max_length=100, blank=True)

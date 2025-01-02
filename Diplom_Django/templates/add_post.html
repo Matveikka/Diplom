@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="centered">Добавить новый пост</h2>
+    <form method="post" action="{% url 'new_post' %}">
+        {% csrf_token %}
+        <label for="title">Заголовок</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="rezume">Краткая информация</label><br>
+        <input type="text" id="rezume" name="rezume" required><br>
+        <label for="info">Материал поста</label><br>
+        <textarea id="info" name="info" required></textarea><br>
+        <input type="submit" value="Создать пост"><br>
+        <a href="{% url 'home' %}">Назад к списку постов</a>
+    </form>
+{% endblock %}
