@@ -58,5 +58,5 @@ def new_post(request):
             rezume=rezume,
             info=info,
             slug=slug)
-        return redirect('/')
-    return redirect('new_post')
+    return redirect('/')
+
