@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <h1 class="centered">Блог пользователя Matveikka</h1>
     <h2 class="centered">Список постов</h2>
-    <a href="{% url 'new_post_form' %}">Добавить новый пост</a>
+    {% if user.is_superuser %}
+        <a href="{% url 'new_post_form' %}">Добавить новый пост</a>
+    {% endif %}
+    <button type="button" onclick="location.href='{% url 'register' %}'" class="logout-button">Выйти</button>
     {% for post in posts %}
         <div class="post">
             <h2><a href="{% url 'details' slug=post.slug %}">{{ post.title }}</a></h2>

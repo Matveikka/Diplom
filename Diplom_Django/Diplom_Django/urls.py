@@ -16,18 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
 from django.contrib import admin
 from django.urls import path, re_path
-from blog.views import posts, details, delete_post, after_delete, new_post, new_post_form
+from blog.views import all_posts, get_post, delete_post, after_delete, new_post, new_post_form, register, _login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', posts, name='home'),
-    re_path(r'^posts/(?P<slug>[-a-zA-Z0-9а-яА-ЯёЁ]+)/$', details, name='details'),
+    path('home_page/', all_posts, name='home'),
+    re_path(r'^posts/(?P<slug>[-a-zA-Z0-9а-яА-ЯёЁ]+)/$', get_post, name='details'),
     re_path(r'^posts/(?P<slug>[-a-zA-Z0-9а-яА-ЯёЁ]+)/delete/$', delete_post, name='post_delete'),
     path('posts/deleted/<str:title>/', after_delete, name='after_delete'),
     path('new/', new_post_form, name='new_post_form'),
-    path('new/submit/', new_post, name='new_post')
+    path('new/submit/', new_post, name='new_post'),
+    path('', register, name='register'),
+    path('login/', _login, name='login'),
 ]
-
